@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="app.php" server="188.68.47.150/airleagueband/" local="132541855704480849" remote="132541891200000000" Dst="1" />
+<file name="auth.php" server="188.68.47.150/airleagueband/" local="132537136903601445" remote="132537180600000000" Dst="1" />
+<file name="broadcasting.php" server="188.68.47.150/airleagueband/" local="132508160800792116" remote="132508249200000000" Dst="1" />
+<file name="cache.php" server="188.68.47.150/airleagueband/" local="132508160800862096" remote="132508249200000000" Dst="1" />
+<file name="cors.php" server="188.68.47.150/airleagueband/" local="132508160800931739" remote="132508249200000000" Dst="1" />
+<file name="database.php" server="188.68.47.150/airleagueband/" local="132508160801001554" remote="132508249200000000" Dst="1" />
+<file name="filesystems.php" server="188.68.47.150/airleagueband/" local="132508160801081648" remote="132508249200000000" Dst="1" />
+<file name="fortify.php" server="188.68.47.150/airleagueband/" local="132508162647757110" remote="132508249200000000" Dst="1" />
+<file name="hashing.php" server="188.68.47.150/airleagueband/" local="132508160801161128" remote="132508249200000000" Dst="1" />
+<file name="jetstream.php" server="188.68.47.150/airleagueband/" local="132508162833369638" remote="132508249200000000" Dst="1" />
+<file name="logging.php" server="188.68.47.150/airleagueband/" local="132508160801230940" remote="132508249200000000" Dst="1" />
+<file name="mail.php" server="188.68.47.150/airleagueband/" local="132508160801300754" remote="132508249200000000" Dst="1" />
+<file name="queue.php" server="188.68.47.150/airleagueband/" local="132508160801370566" remote="132508249200000000" Dst="1" />
+<file name="sanctum.php" server="188.68.47.150/airleagueband/" local="132508162829948460" remote="132508249200000000" Dst="1" />
+<file name="services.php" server="188.68.47.150/airleagueband/" local="132508160801440671" remote="132508249200000000" Dst="1" />
+<file name="session.php" server="188.68.47.150/airleagueband/" local="132508162689229927" remote="132508249200000000" Dst="1" />
+<file name="view.php" server="188.68.47.150/airleagueband/" local="132508160801590289" remote="132508249200000000" Dst="1" />
+<file name="languages.php" server="188.68.47.150/airleagueband/" local="132510837829488801" remote="132510873600000000" Dst="1" />
+<file name="laravellocalization.php" server="188.68.47.150/airleagueband/" local="132538330705349028" remote="132538373400000000" Dst="1" />
+<file name="roles.php" server="188.68.47.150/airleagueband/" local="132537554265115224" remote="132537589800000000" Dst="1" />
+<file name="translation-manager.php" server="188.68.47.150/airleagueband/" local="132538338869275895" remote="132538374600000000" Dst="1" />
+<file name="cookie-consent.php" server="188.68.47.150/airleagueband/" local="132541841120654515" remote="132541888200000000" Dst="1" />
+</dwsync>
