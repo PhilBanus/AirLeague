@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'gb' => 'English',
-    'cn' => '中文',
+    'en_GB' => 'English',
+    'zh_CN' => '中文',
 ];

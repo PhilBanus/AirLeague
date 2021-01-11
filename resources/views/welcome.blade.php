@@ -17,12 +17,12 @@
 				   <br>
 				   <div class="uk-card-title uk-text-large uk-text-primary">{{ __('home.commingsoon')}} </div>
 				  @guest
-				   <a href="{{ route('register') }}"><button class="uk-button uk-button-danger">Register interest!</button></a>
-
+				   <a href="{{ route('register') }}"><button class="uk-button uk-button-danger">{{ __('nav.Register')}} </button></a>
+				   <a href="{{Route('login')}}" class="uk-button uk-button-danger" >{{ __('nav.Login')}}</a>
 				   @else
-				   <div class="uk-card-title uk-text-large uk-text-default">Thanks for Registering!</div>
+				   <div class="uk-card-title uk-text-large uk-text-default">{{ __('messages.thanksforregistering')}} </div>
 			   	   @endguest
-			   
+			   	
 			   </div>
 		
   </div>

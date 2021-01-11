@@ -36,7 +36,6 @@ Route::middleware(['auth:sanctum', 'is_admin'])->get('/admins', function () {
 })->name('admins');
 
 
-
 Route::get('/post/{id}', function (Request $request, $id) {
     return view('LatestPosts',['id' => $id]);
 });
@@ -67,6 +66,12 @@ Route::get('/image/{id}/edit', function (Request $request, $id) {
 	Route::get('/admins/NewPost', function () {
 		return view('admin.NewPost');
 });
+	Route::get('/admins/PreviousPosts', function () {
+		return view('admin.newsletters');
+})->name('AdminPreviousPosts');
+	Route::get('/admins/editpost/{id}', function (Request $request, $id) {
+    return view('admin.editPost',['id' => $id]);
+});
 	
 	Route::get('datatablesdata', [App\Http\Controllers\DatatablesController::class,'anyData']);
 	Route::post('admins/CreateAdmin', [App\Http\Controllers\DatatablesController::class,'CreateAdmin']);
@@ -76,8 +81,11 @@ Route::get('/image/{id}/edit', function (Request $request, $id) {
 	Route::post('admins/postImageUpload', [App\Http\Controllers\DatatablesController::class,'postImageUpload']);
 	Route::post('admins/editImage', [App\Http\Controllers\DatatablesController::class,'editImage']);
 	Route::post('admins/NewPostSave', [App\Http\Controllers\DatatablesController::class,'NewPostSave']);
+	Route::post('admins/EditPostSave', [App\Http\Controllers\DatatablesController::class,'EditPostSave']);
 	Route::post('admins/uploadImages', [App\Http\Controllers\DatatablesController::class,'uploadImages']);
 	Route::post('admins/removeImg', [App\Http\Controllers\DatatablesController::class,'removeImg']);
+	
+	Route::post('admins/removePost', [App\Http\Controllers\DatatablesController::class,'removePost']);
 	
 	
 	

@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 <script src="https://cdn.tiny.cloud/1/fpyseprjui1yhz3dgt8v8kql4dt9vvt1tl19p04idphcdjt4/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
   {!! Session::has('error') ? Session::get("error") : '' !!}
@@ -47,9 +48,10 @@ var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
   content_css: useDarkMode ? 'dark' : 'default',
   content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
 	allow_script_urls: true,	
-		@if(App::currentLocale() == 'cn')
-		language: 'zh_CN',
-		@endif
+		relative_urls : false,
+remove_script_host : false,
+		language: '{{App::currentLocale()}}',
+	
 		
 		
 		

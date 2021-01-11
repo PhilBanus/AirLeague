@@ -53,9 +53,9 @@ use Carbon\Carbon;
 			<li class="uk-width-7-8 ">
 	<a href="/post/{{$post->id}}" class="uk-link-reset">
         <div class=" uk-card uk-card-primary uk-border-rounded uk-padding-small uk-grid-collapse uk-child-width-1-2@s uk-margin uk-height-1-1 uk-width-1-1" style="background: rgba(0,0,0,0.40)" uk-grid>
-			
+
 						
-				 @if(!empty($first_img) && \Storage::exists(str_replace('../storage/app/','',$first_img)))
+				 @if(!empty($first_img) && \Storage::exists(str_replace(env('APP_URL').'/storage/app/','',$first_img)))
 			@mobile
 		
 			@elsemobile
@@ -145,10 +145,10 @@ use Carbon\Carbon;
         </a>	
 			@elsemobile
 			
-		<div class="uk-grid-small uk-flex uk-child-width-1-6@s uk-child-width-1-2 uk-child-height-1-1@s	 uk-flex-center uk-text-center" uk-grid uk-lightbox="animation: slide">
+		<div class="lightgallery uk-grid-small uk-flex uk-child-width-1-6@s uk-child-width-1-2 uk-child-height-1-1@s	 uk-flex-center uk-text-center" uk-grid  >
 			@foreach(DB::table('images')->orderby('created_at','desc')->take(6)->get() as $image)
-    <div>
-        <a class="uk-inline uk-padding-remove-vertical gallery" href="{{$image->path}}"  >
+    <div class="" href="{{$image->path}}" >
+        <a class="uk-inline uk-padding-remove-vertical gallery" href="{{$image->path}}"  src="{{$image->path}}" >
             <img src="{{$image->path}}" class="" alt="">
         </a>
     </div>

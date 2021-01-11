@@ -1,0 +1,27 @@
+<?php
+
+return array (
+  'Explore' => '探索',
+  'Home' => '家',
+  'About' => '关于',
+  'TheBand' => '乐队',
+  'BandLogo' => '乐队徽标',
+  'Company' => '公司',
+  'OverseasFanGroup' => '海外粉丝团',
+  'News' => '新闻',
+  'Newsletters' => '时事通讯',
+  'PressRelease' => '新闻稿',
+  'Interviews' => '面试',
+  'Timeline' => '时间线',
+  'Events' => '大事记',
+  'Tours' => '旅游团',
+  'Performances' => '演唱会',
+  'BandSponsorEvents' => '乐队赞助活动',
+  'CharityEvents' => '慈善活动',
+  'Media' => '媒体',
+  'PhotoGallary' => '照片库',
+  'VideoGallery' => '影片库',
+  'ContactUs' => '联系我们',
+  'Login' => '登录',
+  'Admin' => '管理员',
+);

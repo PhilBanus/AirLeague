@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -28,10 +29,12 @@
 
 	 <!-- DataTables -->
         <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+	
         <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap5.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css">
 
 	<link href="{{ asset('public/FA6/css/all.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('public/volt/css/volt.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
 	
 	
@@ -158,9 +161,17 @@
       }
     </style>
 	
-	        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://rawgit.com/kswedberg/jquery-smooth-scroll/master/jquery.smooth-scroll.js"></script>
 
 	
+	        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+
+
+
 </head>
 	
 	<body>
@@ -207,7 +218,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -251,7 +262,7 @@
 										  active
 										  @endif
 					  ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/admins/PreviousPosts">
               <i class="fal fa-history pe-2"></i>              {{__('AdminNav.Previous_Post')}}
             </a>
           </li>

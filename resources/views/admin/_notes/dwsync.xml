@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="Users.blade.php" server="188.68.47.150/airleagueband/" local="132537554568501676" remote="132537590400000000" Dst="1" />
-<file name="NewPost.blade.php" server="188.68.47.150/airleagueband/" local="132542207278196372" remote="132542242800000000" Dst="1" />
-<file name="editPhotos.blade.php" server="188.68.47.150/airleagueband/" local="132542704940931585" remote="132542740800000000" Dst="1" />
-<file name="gallery.blade.php" server="188.68.47.150/airleagueband/" local="132542816100860973" remote="132542851800000000" Dst="1" />
+<file name="NewPost.blade.php" server="188.68.47.150/airleagueband/" local="132548420279514135" remote="132548455800000000" Dst="1" />
+<file name="editPhotos.blade.php" server="188.68.47.150/airleagueband/" local="132548415657323946" remote="132548451600000000" Dst="1" />
+<file name="gallery.blade.php" server="188.68.47.150/airleagueband/" local="132547921612113573" remote="132547957200000000" Dst="1" />
 <file name="uploadImages.blade.php" server="188.68.47.150/airleagueband/" local="132542805153443668" remote="132542841000000000" Dst="1" />
-<file name="newsletters.php" server="188.68.47.150/airleagueband/" local="132543557327495751" remote="132543597000000000" Dst="1" />
+<file name="newsletters.blade.php" server="188.68.47.150/airleagueband/" local="132548431095521796" remote="132548466600000000" Dst="1" />
+<file name="editPost.blade.php" server="188.68.47.150/airleagueband/" local="132548420166095983" remote="132548455800000000" Dst="1" />
 </dwsync>

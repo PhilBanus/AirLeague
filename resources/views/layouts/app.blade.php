@@ -556,14 +556,41 @@ alt="" uk-cover>
 			
 
 			<script type="text/javascript">
+				
     $(document).ready(function() {
-        $(".lightgallery").lightGallery(); 
+		var $lg = $('.lightgallery');
+        $lg.lightGallery(); 
+		
+			$lg.on('onAfterOpen.lg', function(event){
+								
+  $('a[download]').one('click', function(){
+ var path = $(this).attr('href');
+	$.post('/api/LinkPath',{
+		path:path, type:'download'
+	}) })
 
+$('div[data-vimeo-id]').one('click', function(){
+ var path = $(this).children('img').attr('src');
+	$.post('/api/LinkPath',{
+		path:path, type:'link'
+	}) })
+$('a').on('click', function(){
+	console.log('download clicked')
+	if($(this)[0].hasAttribute('download')){
+		
+	console.log('download clicked')
+ var path = $(this).attr('href');
+	$.post('/api/LinkPath',{
+		path:path, type:'download'
+	})} })
+			}
+				   )
 		
 
 		
 });
 	
+
 	
 </script>
 			

@@ -7,9 +7,10 @@
 <file name="TrimStrings.php" server="188.68.47.150/airleagueband/" local="132508160799667621" remote="132508249200000000" Dst="1" />
 <file name="TrustHosts.php" server="188.68.47.150/airleagueband/" local="132508160799727471" remote="132508249200000000" Dst="1" />
 <file name="TrustProxies.php" server="188.68.47.150/airleagueband/" local="132508160799787289" remote="132508249200000000" Dst="1" />
-<file name="VerifyCsrfToken.php" server="188.68.47.150/airleagueband/" local="132542733242153442" remote="132542769000000000" Dst="1" />
+<file name="VerifyCsrfToken.php" server="188.68.47.150/airleagueband/" local="132547989349366064" remote="132548025000000000" Dst="1" />
 <file name="Language.php" server="188.68.47.150/airleagueband/" local="132510517515807659" remote="132510553800000000" Dst="1" />
 <file name="check.locale.php" server="188.68.47.150/airleagueband/" local="132511677496784949" remote="132510528600000000" Dst="1" />
 <file name="checklocale.php" server="188.68.47.150/airleagueband/" local="132511677498310887" remote="132510529200000000" Dst="1" />
 <file name="isAdmin.php" server="188.68.47.150/airleagueband/" local="132537149801524921" remote="132537185400000000" Dst="1" />
+<file name="activity.php" server="188.68.47.150/airleagueband/" local="132548415160775522" remote="132548451000000000" Dst="1" />
 </dwsync>

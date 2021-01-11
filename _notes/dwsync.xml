@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="artisan" server="188.68.47.150/airleagueband/" local="132508160800343630" remote="132508249200000000" Dst="1" />
-<file name="composer.json" server="188.68.47.150/airleagueband/" local="132541840038203820" remote="132541888800000000" Dst="1" />
-<file name="composer.lock" server="188.68.47.150/airleagueband/" local="132541840056850595" remote="132541888800000000" Dst="1" />
-<file name="package.json" server="188.68.47.150/airleagueband/" local="132511690421037462" remote="132509871600000000" Dst="1" />
-<file name="package-lock.json" server="188.68.47.150/airleagueband/" local="132511690423929717" remote="132509871600000000" Dst="1" />
+<file name="composer.json" server="188.68.47.150/airleagueband/" local="132547945108785026" remote="132547981200000000" Dst="1" />
+<file name="composer.lock" server="188.68.47.150/airleagueband/" local="132547945126789590" remote="132547981200000000" Dst="1" />
+<file name="package.json" server="188.68.47.150/airleagueband/" local="132547915930518404" remote="132547981200000000" Dst="1" />
+<file name="package-lock.json" server="188.68.47.150/airleagueband/" local="132547915931765081" remote="132547981200000000" Dst="1" />
 <file name="phpunit.xml" server="188.68.47.150/airleagueband/" local="132508160802017681" remote="132508249200000000" Dst="1" />
-<file name="README.md" server="188.68.47.150/airleagueband/" local="132508160799023728" remote="132508249200000000" Dst="1" />
+<file name="README.md" server="188.68.47.150/airleagueband/" local="132547620091208541" remote="132547981200000000" Dst="1" />
 <file name="tailwind.config.js" server="188.68.47.150/airleagueband/" local="132508162832180305" remote="132508249200000000" Dst="1" />
 <file name="webpack.config.js" server="188.68.47.150/airleagueband/" local="132508162832190289" remote="132508249200000000" Dst="1" />
 <file name="webpack.mix.js" server="188.68.47.150/airleagueband/" local="132508541097539005" remote="132508618200000000" Dst="1" />

@@ -484,7 +484,7 @@ alt="" uk-cover>
 		 @foreach (Config::get('languages') as $lang => $language)
             @if ($lang != App::getLocale())
                 <li>
-                    <a class="uk-dark" style="color: black !important" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a>
+                    <a class="uk-light" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a>
                 </li>
             @endif
         @endforeach

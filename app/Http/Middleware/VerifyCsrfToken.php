@@ -16,5 +16,6 @@ class VerifyCsrfToken extends Middleware
 		'admins/postImageUpload',
 		'admins/editImage',
 		'admins/uploadImages',
+		'LinkPath',
     ];
 }

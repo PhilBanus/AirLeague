@@ -10,6 +10,7 @@ use Yajra\Datatables\Datatables;
 use DB;
 use Auth;
 use Storage;
+use URL;
 
 class DatatablesController extends Controller
 {
@@ -69,7 +70,7 @@ class DatatablesController extends Controller
 
 		$json = "{ location : 'https://airleagueband.com/storage/app/$path'}";
         return response()
-					->json(['location' => "/storage/app/$path"]);
+					->json(['location' => env('APP_URL')."/storage/app/$path"]);
 		
 		
 	}
@@ -81,7 +82,7 @@ class DatatablesController extends Controller
 
 		$json = "{ location : 'https://airleagueband.com/storage/app/$path'}";
         return response()
-					->json(['location' => "/storage/app/$path"]);
+					->json(['location' => env('APP_URL')."/storage/app/$path"]);
 		
 		
 	}
@@ -106,7 +107,12 @@ class DatatablesController extends Controller
 		
 		preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $request->mytextarea, $image);
 
-		print_r($image[0]);
+		$post = DB::table('posts')->insertGetId([
+		'user_id' => Auth::id(),
+		'post' => $request->mytextarea,
+		'Header' => $request->Header
+		]);
+		
 		foreach($image[0] as $imaged){
 			preg_match( '@src="([^"]+)"@' , $imaged, $match );
 			$src = array_pop($match);
@@ -115,18 +121,57 @@ class DatatablesController extends Controller
 			
 			DB::table('images')->insert([
 				'user_id' => Auth::id(),
-				'path' => $src
+				'path' => $src,
+				'Post_ID' => $post
 				]);
 			
 		}
-
-		DB::table('posts')->insert([
-		'user_id' => Auth::id(),
+		
+		return redirect()->route('admins');
+		}
+	public function EditPostSave(Request $request){
+		
+		if (!strlen(trim($request->mytextarea))){
+			session()->flash('error', '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Post not saved:</strong>  Body of the post can not be empty.
+  <button  class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+			
+			
+			<div class="uk-alert-warning" uk-alert>
+    <a class="uk-alert-close" uk-close></a>
+    <p></p>
+</div>');
+    	
+		return redirect()->route('AdminPreviousPosts');
+			exit();
+		}
+		
+		preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $request->mytextarea, $image);
+		
+		DB::table('images')->where('Post_ID',$request->Post_ID)->delete();
+		
+		DB::table('posts')->where('id',$request->Post_ID)->update([
+		
 		'post' => $request->mytextarea,
 		'Header' => $request->Header
 		]);
 		
-		return redirect()->route('admins');
+		foreach($image[0] as $imaged){
+			preg_match( '@src="([^"]+)"@' , $imaged, $match );
+			$src = array_pop($match);
+			
+	
+			
+			DB::table('images')->insert([
+				'user_id' => Auth::id(),
+				'path' => $src,
+				'Post_ID' => $request->Post_ID
+				]);
+			
+		}
+		
+		return redirect()->route('AdminPreviousPosts');
 		}
 	
 	
@@ -135,25 +180,69 @@ class DatatablesController extends Controller
 		
 		$id = DB::table('images')->insertGetId([
 				'user_id' => Auth::id(),
-				'path' => '../storage/app/'.$path
+				'path' => env('APP_URL').'/storage/app/'.$path
 				]);
 		
 		return 
 			response()
-            ->json(['path' => '../storage/app/'.$path, 'id' => $id])
+            ->json(['path' => env('APP_URL').'/storage/app/'.$path, 'id' => $id])
 			
 			;
 	}
 	
 	public function removeImg(Request $request){
 		
-		if(Storage::exists(str_replace('../storage/app/','',$request->path))){
-		Storage::delete(str_replace('../storage/app/','',$request->path));
+		if(Storage::exists(str_replace(env('APP_URL').'/storage/app/','',$request->path))){
+		Storage::delete(str_replace(env('APP_URL').'/storage/app/','',$request->path));
 		}
 		 DB::table('images')->where('id',$request->id)->delete();
 		
 		
 		
+		
+		
+	}
+	
+	
+	public function removePost(Request $request){
+		
+		DB::table('posts')->where('id',$request->id)->delete();
+		
+		foreach(DB::table('images')->where('Post_ID',$request->id)->get() as $image){
+		
+		if(Storage::exists(str_replace(env('APP_URL').'/storage/app/','',$image->path))){
+		Storage::delete(str_replace(env('APP_URL').'/storage/app/','',$image->path));
+		}
+		 DB::table('images')->where('id',$image->id)->delete();
+		
+		}
+		
+		
+		
+	}
+	
+	
+	public function LinkPath(Request $request){
+		
+		if($request->type === 'download'){
+			
+		if(strpos(str_replace(env('APP_URL'),'',$request->path),'storage') !== false)	{	
+	activity()
+  ->causedByAnonymous()
+   ->withProperties(['type' => 'Photo_Download'])
+   ->log(str_replace(env('APP_URL'),'',$request->path));
+		
+	}
+		}else{
+			
+		if(strpos(str_replace(env('APP_URL'),'',$request->path),'storage') !== false)	{	
+	activity()
+  ->causedByAnonymous()
+   ->withProperties(['type' => 'Photo_Visit'])
+   ->log(str_replace(env('APP_URL'),'',$request->path));
+		
+	}
+		}
 		
 		
 	}

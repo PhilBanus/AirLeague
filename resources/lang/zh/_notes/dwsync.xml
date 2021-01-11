@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="auth.php" server="188.68.47.150/airleagueband/" local="132511731293184849" remote="132510511200000000" Dst="1" />
-<file name="pagination.php" server="188.68.47.150/airleagueband/" local="132511731294618255" remote="132510511200000000" Dst="1" />
-<file name="passwords.php" server="188.68.47.150/airleagueband/" local="132511731294907497" remote="132510511200000000" Dst="1" />
-<file name="home.php" server="188.68.47.150/airleagueband/" local="132511731295671237" remote="132510512400000000" Dst="1" />
-<file name="validation.php" server="188.68.47.150/airleagueband/" local="132511731296588806" remote="132510511200000000" Dst="1" />
+<file name="auth.php" server="188.68.47.150/airleagueband/" local="132547873702947762" remote="132547909800000000" Dst="1" />
+<file name="pagination.php" server="188.68.47.150/airleagueband/" local="132547873703217035" remote="132547909800000000" Dst="1" />
+<file name="passwords.php" server="188.68.47.150/airleagueband/" local="132547873703246963" remote="132547909800000000" Dst="1" />
+<file name="home.php" server="188.68.47.150/airleagueband/" local="132547873703047493" remote="132547909800000000" Dst="1" />
+<file name="validation.php" server="188.68.47.150/airleagueband/" local="132547873703376614" remote="132547909800000000" Dst="1" />
+<file name="AdminNav.php" server="188.68.47.150/airleagueband/" local="132547873702788190" remote="132547909800000000" Dst="1" />
+<file name="adminRoles.php" server="188.68.47.150/airleagueband/" local="132547873702858002" remote="132547909800000000" Dst="1" />
+<file name="messages.php" server="188.68.47.150/airleagueband/" local="132547873703077416" remote="132547909800000000" Dst="1" />
+<file name="nav.php" server="188.68.47.150/airleagueband/" local="132547873703107326" remote="132547909800000000" Dst="1" />
+<file name="Register.php" server="188.68.47.150/airleagueband/" local="132547873703276880" remote="132547909800000000" Dst="1" />
 </dwsync>

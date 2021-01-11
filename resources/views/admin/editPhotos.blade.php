@@ -30,7 +30,7 @@ $name = str_replace($path.'/','',$string);
 	 
 
 
-    <div id="mytextarea" class="w-auto h-auto" name="mytextarea"><img src="../../{{$image}}" alt=""  /></div>
+    <div id="mytextarea" class="w-auto h-auto" name="mytextarea"><img src="{{$image}}" alt=""  /></div>
 	 
 
 
