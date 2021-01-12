@@ -35,10 +35,8 @@ use Carbon\Carbon;
 	
 	
     <!-- Styles -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 
 	<link rel="stylesheet" href="{{ asset('css/uikit.min.css') }}">
@@ -398,11 +396,8 @@ use Carbon\Carbon;
     <script src="{{ asset('public/lightGallery/modules/lg-video.min.js') }}" defer></script>
     <script src="{{ asset('public/lightGallery/modules/lg-fullscreen.min.js') }}" defer></script>
 
-	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
-<script src="{{ asset('public/masonry/js/masonry-docs.min.js') }}"></script>
 
-	
 </head>
 <body class="uk-overflow-hidden uk-padding-remove uk-height-1-1" >
 	

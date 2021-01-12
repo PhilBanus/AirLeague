@@ -21,6 +21,18 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/TheBand', function () {
+    return view('TheBand');
+})->name('TheBand');
+
+Route::get('/TheLogo', function () {
+    return view('TheLogo');
+})->name('TheLogo');
+
 Route::get('/gallery', function () {
     return view('gallery');
 })->name('gallery');
@@ -84,6 +96,7 @@ Route::get('/image/{id}/edit', function (Request $request, $id) {
 	Route::post('admins/EditPostSave', [App\Http\Controllers\DatatablesController::class,'EditPostSave']);
 	Route::post('admins/uploadImages', [App\Http\Controllers\DatatablesController::class,'uploadImages']);
 	Route::post('admins/removeImg', [App\Http\Controllers\DatatablesController::class,'removeImg']);
+	Route::post('admins/imageTagSave', [App\Http\Controllers\imageController::class,'imageTagSave']);
 	
 	Route::post('admins/removePost', [App\Http\Controllers\DatatablesController::class,'removePost']);
 	

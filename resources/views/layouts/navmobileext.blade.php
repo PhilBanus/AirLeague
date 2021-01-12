@@ -49,9 +49,10 @@
             <li><a href="{{Route('home')}}">{{ __('nav.Home')}}</a></li>
 			@endif
 			
-			<div hidden="">
+			
             <li class="uk-nav-header uk-text-bolder" ><a href="#">{{ __('nav.About')}}</a></li>
-            <li><a href="#">{{ __('nav.TheBand')}}</a></li>
+            <li><a href="/TheBand">{{ __('nav.TheBand')}}</a></li>
+				<div hidden="">
             <li><a href="#">{{ __('nav.BandLogo')}}</a></li>
             <li><a href="#">{{ __('nav.Company')}}</a></li>
             <li><a href="#">{{ __('nav.OverseasFanGroup')}}</a></li>

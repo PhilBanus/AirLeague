@@ -149,6 +149,10 @@ class DatatablesController extends Controller
 		
 		preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $request->mytextarea, $image);
 		
+		foreach(DB::table('images')->where('Post_ID',$request->Post_ID)->get() as $image){
+			DB::table('image_tags')->where('image_id',$image->id)->delete();
+		}
+		
 		DB::table('images')->where('Post_ID',$request->Post_ID)->delete();
 		
 		DB::table('posts')->where('id',$request->Post_ID)->update([
@@ -195,6 +199,10 @@ class DatatablesController extends Controller
 		if(Storage::exists(str_replace(env('APP_URL').'/storage/app/','',$request->path))){
 		Storage::delete(str_replace(env('APP_URL').'/storage/app/','',$request->path));
 		}
+		
+			foreach( DB::table('images')->where('id',$request->id)->get() as $image){
+			DB::table('image_tags')->where('image_id',$image->id)->delete();
+		}
 		 DB::table('images')->where('id',$request->id)->delete();
 		
 		
@@ -212,6 +220,11 @@ class DatatablesController extends Controller
 		
 		if(Storage::exists(str_replace(env('APP_URL').'/storage/app/','',$image->path))){
 		Storage::delete(str_replace(env('APP_URL').'/storage/app/','',$image->path));
+		}
+			
+			
+			foreach( DB::table('images')->where('id',$request->id)->get() as $image){
+			DB::table('image_tags')->where('image_id',$image->id)->delete();
 		}
 		 DB::table('images')->where('id',$image->id)->delete();
 		

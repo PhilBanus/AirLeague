@@ -161,14 +161,14 @@
       }
     </style>
 	
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+
 	<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 <script src="https://rawgit.com/kswedberg/jquery-smooth-scroll/master/jquery.smooth-scroll.js"></script>
 
 	
 	        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
-
-	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
 
 
 
@@ -186,6 +186,13 @@
 	<div class="btn text-white disabled ps-2">{{__('messages.hello')}}, {{Auth::user()->name}}</div>
 		</div>
 	 <div class="ms-auto d-flex text-right">
+		 <div class="dropdown me-1">
+		 <a class="btn  btn-secondary " href="/translations">
+        {{ __('Translations') }}
+    </a>
+		 
+		 </div>
+		 
 		 <div class="dropdown me-1">
 		 <a class="btn  btn-secondary " href="{{ route('logout') }}"  onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
