@@ -8,7 +8,7 @@
     <ul class="nav nav-pills">
 		<li class="nav-item tag_all"  uk-filter-control=""><div class="nav-link active" href="#">ALL</div></li>
 		@foreach(DB::table('image_tags')->select('tag')->groupby('tag')->orderby('tag','asc')->get() as $tag)
-        <li class="nav-item" uk-filter-control=".tag-{{$tag->tag}}"><div class="nav-link" href="#">{{$tag->tag}}</div></li>
+        <li class="nav-item" uk-filter-control=".tag-{{str_replace(' ', '', $tag->tag)}}"><div class="nav-link" href="#">{{$tag->tag}}</div></li>
 		@endforeach
     </ul>
 
@@ -20,7 +20,7 @@
 	@foreach(DB::table('images')->orderby('created_at','desc')->get() as $image)
 	 <div class=" col-6 col-sm-4 col-md-3 col-lg-2 mb-4 mason tag
 				  @foreach(DB::table('image_tags')->where('image_id',$image->id)->orderby('tag','asc')->get() as $tag)
-			  tag-{{$tag->tag}} 
+			  tag-{{str_replace(' ', '', $tag->tag)}} 
 			  @endforeach" style="position: absolute; left: 0%; top: 362px;">
 		    <div class="card">
     <a href="/image/{{$image->id}}/edit" >
